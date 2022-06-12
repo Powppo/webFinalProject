@@ -62,7 +62,7 @@
           @yield('content')
         </main>
         <h1>Welcome to Final Project</h1>
-        <h2>We create <span class="typed" data-typed-items="beautiful graphics, functional websites, working mobile apps"></span></h2>
+        <h2>We <span class="typed" data-typed-items="don't give a fuck, don't give a shits, don't give a goddamn motherfuckers"></span></h2>
         <div class="actions">
           <a href="#about" class="btn-get-started">Get Strated</a>
           <a href="#services" class="btn-services">Our Services</a>

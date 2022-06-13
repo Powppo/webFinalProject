@@ -1,4 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
 @extends('layouts.app')
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Final Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('style/assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset('style/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('style/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset('style/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('style/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('style/assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Imperial - v5.7.0
+  * Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 <!--source-->
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="loginStyle3/images/icons/favicon.ico"/>
@@ -28,67 +77,20 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+				<form class="login100-form validate-form" method="POST" action="{{ route('layouts.updateProfile') }}">
                     @csrf
+                    @method('PUT')
 					<span class="login100-form-title p-b-26">
-						Don't Have an Account?
+						My Profile
 					</span>
                     <!--Name-->
-					<div class="wrap-input100 validate-input">
-						<input class="input100" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-						@error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        <span class="focus-input100" data-placeholder="Name"></span>
-					</div>
+					<li class="list-group-item"><b>Name </b>{{$users->name}}</li>
                     <!--Email-->
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-						@error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        <span class="focus-input100" data-placeholder="Email"></span>
-					</div>
-                    <!--Address-->
-                    <div class="wrap-input100 validate-input">
-						<input class="input100" id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
-						@error('address')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        <span class="focus-input100" data-placeholder="Address"></span>
-					</div>
-                    <!--Phone Number-->
-                    <div class="wrap-input100 validate-input">
-						<input class="input100" id="phoneNumber" type="phoneNumber" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" required autocomplete="phoneNumber" autofocus>
-						@error('phoneNumber')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        <span class="focus-input100" data-placeholder="Phone Number"></span>
-					</div>
+                    <li class="list-group-item"><b>Name </b>{{$users->name}}</li>
                     <!--Password-->
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-						<input class="input100" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-						<span class="focus-input100" data-placeholder="Password"></span>
-					</div>
+					
                     <!--Confirm Password-->
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-						<input class="input100" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-						<span class="focus-input100" data-placeholder="Confirm Password"></span>
-					</div>
+                    
                     <!--Button-->
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
@@ -114,7 +116,6 @@
 	</div>
 
 <div id="dropDownSelect1"></div>
-<div id="dropDownSelect1"></div>
 <!--===============================================================================================-->
 <script src="loginStyle3/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -131,5 +132,20 @@
 	<script src="loginStyle3/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="loginStyle3/js/main.js"></script>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+      <div data-aos="fade-in">
+        <div class="hero-logo">
+          <img class="" src="{{ asset('style/assets/img/logo3.png')}}" alt="Imperial">
+        </div>
+        <main class="py-4">
+          @yield('content')
+        </main>
+        <h2><span class="typed" data-typed-items="Welcome to Final Project!, Please Login to access our features!"></span></h2>
+      </div>
+    </div>
+  </section><!-- End Hero -->
 </body>
-@endsection
+</html>

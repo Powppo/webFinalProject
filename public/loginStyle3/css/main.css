@@ -176,7 +176,7 @@ iframe {
 }
 
 .wrap-login100 {
-  width: 450px;
+  width: 520px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -202,6 +202,7 @@ iframe {
   font-size: 30px;
   color: #333333;
   line-height: 1.2;
+  height: 110px;
   text-align: center;
 }
 .login100-form-title i {

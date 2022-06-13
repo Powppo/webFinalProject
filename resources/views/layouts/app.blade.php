@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,12 +60,7 @@
         <main class="py-4">
           @yield('content')
         </main>
-        <h1>Welcome to Final Project</h1>
-        <h2>We <span class="typed" data-typed-items="don't give a fuck, don't give a shits, don't give a goddamn motherfuckers"></span></h2>
-        <div class="actions">
-          <a href="#about" class="btn-get-started">Get Strated</a>
-          <a href="#services" class="btn-services">Our Services</a>
-        </div>
+        <h2><span class="typed" data-typed-items="Welcome to Final Project!, Please Login to access our features!"></span></h2>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -115,6 +109,7 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
@@ -144,30 +139,29 @@
           <div class="col-md-12">
             <h3 class="section-title">About Us</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
-          </div>
+            <p class="section-description">Our entire Career, Journey, and Motivation</p>
+            </div>
         </div>
       </div>
       <div class="container about-container" data-aos="fade-up" data-aos-delay="200">
         <div class="row">
 
           <div class="col-lg-6 about-img">
-            <img src="{{ asset('style/assets/img/about-img.jpg')}}" alt="">
+            <img src="{{ asset('style/assets/img/streetAbout-img.jpg')}}" alt="">
           </div>
 
           <div class="col-md-6 about-content">
-            <h2 class="about-title">We provide great services and ideass</h2>
+            <h2 class="about-title">Our Journey</h2>
             <p class="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate
+              For a couple of years now we have been on an otherworldly adventure that has caused a move in my spirit. We startedd to feel that as my point of view on life developed, my motivation for taking photos didn’t impact me any longer. It as of late hit me that my explanations behind adoring photography could advance inside me also.
             </p>
             <p class="about-text">
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-              id est laborum
+              I used to take pictures trying to stop time. I felt frantic to clutch past recollections, instead of living now.
             </p>
             <p class="about-text">
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli.
+              When I glance back at old photos, I would prefer not to feel that mixed sentimentality for what used to be. I rather what to be re-propelled to find that inclination of affection for what is in my present life…
             </p>
+          
           </div>
         </div>
       </div>
@@ -180,15 +174,24 @@
           <div class="col-md-12">
             <h3 class="section-title">Our Services</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <p class="section-description">Our Website Features & Services we want to introduce</p>
           </div>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-4 col-md-6 service-item">
             <div class="service-icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="service-title"><a href="">Lorem Ipsum</a></h4>
-            <p class="service-description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="service-title"><a href="">Upload your Photo</a></h4>
+            <p class="service-description">Upload any photos and get your first income!</p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="service-title"><a href="">Choose and Purchase Photo</a></h4>
+            <p class="service-description">Choose any photos and get the license of the photos, use it for everything!</p>
+          </div>
         </div>
       </div>
     </section><!-- End Services Section -->
@@ -200,7 +203,7 @@
           <div class="col-md-12">
             <h3 class="section-title">Gallery</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec dicturum fuisse</p>
+            <p class="section-description">Provide the best Photography from the best Photographer</p>
           </div>
         </div>
 
@@ -208,9 +211,9 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Opt-1</li>
-              <li data-filter=".filter-card">Opt-2</li>
-              <li data-filter=".filter-web">Opt-3</li>
+              <li data-filter=".filter-app">Street</li>
+              <li data-filter=".filter-card">Nature</li>
+              <li data-filter=".filter-web">Animal</li>
             </ul>
           </div>
         </div>
@@ -220,9 +223,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+              <h4>Street 1</h4>
+              <p>Street Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Street 1"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -230,9 +233,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <h4>Animal 1</h4>
+              <p>Animal Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Animal 1"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -240,9 +243,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-3.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-plus"></i></a>
+              <h4>Street 2</h4>
+              <p>Street Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Street 2"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -250,9 +253,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-4.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-4.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-plus"></i></a>
+              <h4>Nature 1</h4>
+              <p>Nature Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-4.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Nature 1"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -260,9 +263,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-5.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-plus"></i></a>
+              <h4>Animal 2</h4>
+              <p>Animal Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Animal 2"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -270,9 +273,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-6.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-6.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-plus"></i></a>
+              <h4>Street 3</h4>
+              <p>Street Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-6.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Street 3"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -280,9 +283,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-7.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-7.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-plus"></i></a>
+              <h4>Nature 2</h4>
+              <p>Nature Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-7.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Nature 2"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -290,9 +293,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-8.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-8.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-plus"></i></a>
+              <h4>Nature 3</h4>
+              <p>Nature Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-8.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Nature 3"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -300,9 +303,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="{{ asset('style/assets/img/portfolio/portfolio-9.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="{{ asset('style/assets/img/portfolio/portfolio-9.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <h4>Animal 3</h4>
+              <p>Animal Photography</p>
+              <a href="{{ asset('style/assets/img/portfolio/portfolio-9.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Animal 3"><i class="bi bi-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
@@ -319,7 +322,7 @@
           <div class="col-md-12">
             <h3 class="section-title">Our Team</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <p class="section-description">Let us introduce who works on this Project!</p>
           </div>
         </div>
 
@@ -328,7 +331,7 @@
 
           <div class="col">
             <div class="member">
-              <div class="pic"><img src="{{ asset('style/assets/img/team/team-3.png')}}" alt=""></div>
+              <div class="pic"><img src="{{ asset('style/assets/img/team/afrizal.jpg')}}" alt=""></div>
               <h4>Muhammad Afrizal Hamimudin</h4>
               <span>Member 1</span>
               <div class="social">

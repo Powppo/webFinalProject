@@ -32,7 +32,7 @@
 				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                     @csrf
 					<span class="login100-form-title p-b-26">
-						Have an Account?
+						Already have an Account?
 					</span>
                     <!--Email-->
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
@@ -74,6 +74,23 @@
 			</div>
 		</div>
 	</div>
+    
 <div id="dropDownSelect1"></div>
+<!--===============================================================================================-->
+<script src="loginStyle3/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/bootstrap/js/popper.js"></script>
+	<script src="loginStyle3/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/daterangepicker/moment.min.js"></script>
+	<script src="loginStyle3/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/js/main.js"></script>
 </body>
 @endsection

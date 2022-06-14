@@ -110,6 +110,10 @@
 
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   
+                <a class="dropdown-item" href="{{ route('layouts.showProfile') }}">
+                      {{ __('My Profile') }}
+                  </a>
+                  
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
@@ -153,7 +157,7 @@
           <div class="col-md-6 about-content">
             <h2 class="about-title">Our Journey</h2>
             <p class="about-text">
-              For a couple of years now we have been on an otherworldly adventure that has caused a move in my spirit. We startedd to feel that as my point of view on life developed, my motivation for taking photos didn’t impact me any longer. It as of late hit me that my explanations behind adoring photography could advance inside me also.
+              For a couple of years now we have been on an otherworldly adventure that has caused a move in my spirit. We started to feel that as my point of view on life developed, my motivation for taking photos didn’t impact me any longer. It as of late hit me that my explanations behind adoring photography could advance inside me also.
             </p>
             <p class="about-text">
               I used to take pictures trying to stop time. I felt frantic to clutch past recollections, instead of living now.
@@ -189,12 +193,13 @@
         <div class="row" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-4 col-md-6 service-item">
             <div class="service-icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="service-title"><a href="">Choose and Purchase Photo</a></h4>
+            <h4 class="service-title"><a class="nav-link scrollto " href="#portfolio">Choose and Purchase Photo</a></h4>
             <p class="service-description">Choose any photos and get the license of the photos, use it for everything!</p>
           </div>
         </div>
       </div>
-    </section><!-- End Services Section -->
+    </section>
+    <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio">
@@ -226,7 +231,7 @@
               <h4>Street 1</h4>
               <p>Street Photography</p>
               <a href="{{ asset('style/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Street 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href={{ route('layouts.galleries') }} class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
@@ -400,9 +405,6 @@
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group mt-3">
                   <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>

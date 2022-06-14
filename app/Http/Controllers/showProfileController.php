@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class showProfileController extends Controller
 {
     public function show()
     {
-        return view ('layouts.showProfile');
+        $user=User::all();
+        return $user;
     }
 }

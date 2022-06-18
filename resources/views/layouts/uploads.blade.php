@@ -77,26 +77,13 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
+      <a href="{{ route('home') }}"" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
       <!-- Uncomment below if you prefer to use a text logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drops</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('home') }}"><- Back to Homepage</a></li>
         @guest
           @if (Route::has('login'))
               <li class="nav-item">
@@ -154,12 +141,12 @@
     
         <body>
           <div class="limiter">
-            <div class="container-login100">
+            <div class="container-login100" style="margin-top: 90px">
               <div class="wrap-login100">
                 <form class="login100-form validate-form" method="POST" action="{{ route('uploads') }}">
                         @csrf
                   <span class="login100-form-title p-b-26">
-                    Upload Your Picture Here!
+                    Upload Your Photo Here!
                   </span>
                   <!--Title-->
                   <div class="wrap-input100 validate-input">
@@ -216,6 +203,21 @@
 
   </main><!-- End #main -->
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="position: relative; margin-top: 200px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>Final Project</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

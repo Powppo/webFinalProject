@@ -28,6 +28,5 @@ class uploadsController extends Controller
 
             };
         }
-        return view('home');
     }
 }

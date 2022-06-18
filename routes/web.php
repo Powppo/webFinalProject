@@ -5,6 +5,8 @@ use App\Http\Controllers\updateProfileController;
 use App\Http\Controllers\showProfileController;
 use App\Http\Controllers\galleriesController;
 use App\Http\Controllers\contactController;
+use App\Http\Controllers\uploadsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,7 @@ Route::get('myprofile', [showProfileController::class, 'show'])->name('layouts.s
 
 //Gallery
 Route::get('galleries', [galleriesController::class, 'galleries'])->name('layouts.galleries');
+
+//Upload
+Route::get('uploadsPage', [uploadsController::class, 'index'])->name('uploadsPage');
+Route::post('uploads', [App\Http\Controllers\uploadsController::class, 'uploads'])->name('uploads');

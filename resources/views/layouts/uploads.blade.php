@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<!--source-->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Final Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!--source-->
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="loginStyle3/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -22,11 +32,6 @@
 	<link rel="stylesheet" type="text/css" href="loginStyle3/css/util.css">
 	<link rel="stylesheet" type="text/css" href="loginStyle3/css/main.css">
 <!--===============================================================================================-->
-
-<!--style-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
 
   <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
   <meta property="og:title" content="">
@@ -66,6 +71,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -145,66 +151,71 @@
           <div class="col-md-12">
           </div>
         </div>
-    <!--Test-->
-    @foreach ($user as $item)
-    <div class="limiter">
-        <div class="container-login100">
-        <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-                <span class="login100-form-title p-b-26">
-                    My Profile!
+    
+        <body>
+          <div class="limiter">
+            <div class="container-login100">
+              <div class="wrap-login100">
+                <form class="login100-form validate-form" method="POST" action="{{ route('uploads') }}">
+                        @csrf
+                  <span class="login100-form-title p-b-26">
+                    Upload Your Picture Here!
                   </span>
-              <div class="col-sm-3">
-                <p class="mb-0">Name</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$item['name']}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Location</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$item['address']}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Contact</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$item['phoneNumber']}}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email Address</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{$item['email']}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button type="submit" id="upload" class="login100-form-btn">
-                Edit Profile
-              </button>
-            </div>
-          </div>
-    @endforeach
+                  <!--Title-->
+                  <div class="wrap-input100 validate-input">
+                    <input class="input100" id="title" type="title" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                    @error('title')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                <span class="focus-input100" data-placeholder="Title"></span>
+                  </div>
+
+                  <!--Price-->
+                  <div class="wrap-input100 validate-input">
+                    <input class="input100" id="price" type="price" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                    @error('price')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                <span class="focus-input100" data-placeholder="Price"></span>
+                  </div>
+
+                  <!--Description-->
+                  <div class="wrap-input100 validate-input">
+                    <input class="input100" id="description" type="description" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                    @error('description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                <span class="focus-input100" data-placeholder="Description"></span>
+                  </div>
+                  
+                  <!--Upload Image-->
+                  <div class="col-md-12">
+                    <div class="form-group" >
+                        <input type="file" name="image" id="" class="form-control">
+                    </div>
+                </div>
+
+                  <!--Button-->
+                  <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                      <div class="login100-form-bgbtn"></div>
+                      <button type="submit" id="upload" class="login100-form-btn">
+                        Upload
+                      </button>
+                    </div>
+                  </div>
+        
     </section>
     <!-- End Upload Section -->
 
   </main><!-- End #main -->
+
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -238,3 +249,5 @@
   <!-- Template Main JS File -->
   <script src="{{ asset('style/assets/js/main.js')}}"></script>
 </body>
+
+</html>

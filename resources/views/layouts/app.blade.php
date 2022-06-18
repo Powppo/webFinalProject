@@ -9,6 +9,30 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!--source-->
+<!--===============================================================================================-->	
+<link rel="icon" type="image/png" href="loginStyle3/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="loginStyle3/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="loginStyle3/css/util.css">
+	<link rel="stylesheet" type="text/css" href="loginStyle3/css/main.css">
+<!--===============================================================================================-->
+
   <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
   <meta property="og:title" content="">
   <meta property="og:image" content="">
@@ -77,18 +101,15 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drops</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a class="nav-link scrollto" href="#uploadx">Upload Photo</a></li>
+              <li><a class="nav-link scrollto" href="#purchase">Choose & Purchase</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#upload">Uploads</a></li>
         @guest
           @if (Route::has('login'))
               <li class="nav-item">
@@ -182,22 +203,27 @@
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-4 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="service-title"><a href="">Upload your Photo</a></h4>
-            <p class="service-description">Upload any photos and get your first income!</p>
+        <section id="uploadx">
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 service-item">
+              <div class="service-icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="service-title"><a class="nav-link scrollto" href="#upload">Upload your Photo</a></h4>
+              <p class="service-description">Upload any photos and get your first income!</p>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-4 col-md-6 service-item">
-            <div class="service-icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="service-title"><a class="nav-link scrollto " href="#portfolio">Choose and Purchase Photo</a></h4>
-            <p class="service-description">Choose any photos and get the license of the photos, use it for everything!</p>
+        <section id="purchase">
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 service-item">
+              <div class="service-icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="service-title"><a class="nav-link scrollto " href="#portfolio">Choose and Purchase Photo</a></h4>
+              <p class="service-description">Choose any photos and get the license of the photos, use it for everything!</p>
+            </div>
           </div>
         </div>
-      </div>
+        </section>
+        
     </section>
     <!-- End Services Section -->
 
@@ -318,7 +344,37 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Upload Section ======= -->
+    <section id="upload">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Upload</h3>
+            <div class="section-title-divider"></div>
+            <p class="section-description">Please Click Button Below to Upload your Picture!</p>
+          </div>
+        </div>
+    
+        <body>
+          <div class="limiter">
+            <div class="container-login100">
+                <form class="login100-form validate-form" method="GET" action="{{ route('uploadsPage') }}">
+                        @csrf
+                  <!--Button-->
+                  <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                      <div class="login100-form-bgbtn"></div>
+                      <button type="submit" id="upload" class="login100-form-btn">
+                        Click Here to Upload Your Picture 
+                      </button>
+                    </div>
+                  </div>
+        
+    </section>
+    <!-- End Upload Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team">
@@ -352,7 +408,7 @@
             <div class="member">
               <div class="pic"><img src="{{ asset('style/assets/img/team/team-3.png')}}" alt=""></div>
               <h4>Muhammad Aristya Prayitno</h4>
-              <span>Member 2</span>
+              <span>-</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -367,64 +423,6 @@
       </div>
     </div>
     </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="section-title">Contact Us</h3>
-            <div class="section-title-divider"></div>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-3 col-md-4">
-            <div class="info">
-              <div>
-                <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
-              </div>
-
-              <div>
-                <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-5 col-md-8">
-            <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -460,6 +458,23 @@
   <script src="{{ asset('style/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{ asset('style/assets/vendor/typed.js/typed.min.js')}}"></script>
   <script src="{{ asset('style/assets/vendor/php-email-form/validate.js')}}"></script>
+
+  <!--===============================================================================================-->
+<script src="loginStyle3/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/bootstrap/js/popper.js"></script>
+	<script src="loginStyle3/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/daterangepicker/moment.min.js"></script>
+	<script src="loginStyle3/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="loginStyle3/js/main.js"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('style/assets/js/main.js')}}"></script>

@@ -10,6 +10,7 @@ class showProfileController extends Controller
     public function show()
     {
         $user=User::all();
-        return $user;
+        //return $user;
+        return view ('layouts.showProfile', compact('user'));
     }
 }

@@ -35,7 +35,7 @@ Route::put('update', [updateProfileController::class, 'update'])->name('layouts.
 Route::get('myprofile', [showProfileController::class, 'show'])->name('layouts.showProfile');
 
 //Gallery
-Route::get('galleries', [galleriesController::class, 'galleries'])->name('layouts.galleries');
+Route::get('galleries', [uploadsController::class, 'index2'])->name('layouts.galleries');
 
 //Upload
 Route::get('uploadsPage', [uploadsController::class, 'index'])->name('uploadsPage');

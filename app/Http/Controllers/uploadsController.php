@@ -12,6 +12,13 @@ class uploadsController extends Controller
         return view('layouts.uploads');
     }
 
+    public function index2()
+    {
+        $uploads=Uploads::all();
+        //return $user;
+        return view ('layouts.galleries', compact('uploads'));
+    }
+
     protected function uploads(Request $request)
     {   
         $data = uploads::create($request->all());

@@ -9,7 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!--source-->
+<!--source-->
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="loginStyle3/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -87,13 +87,14 @@
         <h2><span class="typed" data-typed-items="Welcome to Final Project!, Please Login to access our features!"></span></h2>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
+      <a href="{{ route('home') }}" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
       <!-- Uncomment below if you prefer to use a text logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
@@ -150,10 +151,12 @@
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
@@ -190,7 +193,8 @@
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services">
@@ -354,7 +358,7 @@
           <div class="col-md-12">
             <h3 class="section-title">Upload</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">Please Click Button Below to Upload your Picture!</p>
+            <p class="section-description">Please Click Button Below to Upload your Photo!</p>
           </div>
         </div>
     
@@ -368,7 +372,7 @@
                     <div class="wrap-login100-form-btn">
                       <div class="login100-form-bgbtn"></div>
                       <button type="submit" id="upload" class="login100-form-btn">
-                        Click Here to Upload Your Picture 
+                        Click Here to Upload Your Photo 
                       </button>
                     </div>
                   </div>
@@ -424,7 +428,8 @@
     </div>
     </section><!-- End Team Section -->
 
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -445,7 +450,8 @@
         </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

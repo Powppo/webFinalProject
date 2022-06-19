@@ -136,7 +136,7 @@
     <!--My Profile Form-->
     @foreach ($user as $item)
     <div class="limiter">
-        <div class="container-login100" style="margin-top: 90px">
+        <div class="container-login100" style="margin-top: 130px">
         <div class="col-lg-8">
         <div class="card mb-4">
           <div class="card-body">
@@ -196,7 +196,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" style="position: relative; margin-top: 200px">
+  <footer id="footer" style="position: relative; margin-top: 300px">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

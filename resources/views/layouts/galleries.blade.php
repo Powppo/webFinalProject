@@ -128,7 +128,7 @@
         <!--My Galleries Form-->
         @foreach ($uploads as $item)
         <div class="limiter">
-            <div class="container-login100" style="margin-top: 150px">
+            <div class="container-login100" style="margin-top: 200px">
             <div class="col-lg-8">
             <div class="card mb-4">
               <div class="card-body">
@@ -179,7 +179,7 @@
       <!-- End #main -->
     
       <!-- ======= Footer ======= -->
-      <footer id="footer" style="position: relative; margin-top: 370px">
+      <footer id="footer" style="position: relative; margin-top: 500px">
         <div class="container">
           <div class="row">
             <div class="col-md-12">

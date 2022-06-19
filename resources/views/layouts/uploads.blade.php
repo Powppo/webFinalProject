@@ -156,7 +156,7 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                <span class="focus-input100" data-placeholder="Title"></span>
+                                <span class="focus-input100" data-placeholder="Photo Title"></span>
                   </div>
 
                   <!--Price-->
@@ -178,7 +178,7 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                <span class="focus-input100" data-placeholder="Description"></span>
+                                <span class="focus-input100" data-placeholder="Photo Description"></span>
                   </div>
                   
                   <!--Upload Image-->

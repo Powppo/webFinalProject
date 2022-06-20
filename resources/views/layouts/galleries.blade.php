@@ -161,6 +161,15 @@
                     <p class="text-muted mb-0">{{$item['description']}}</p>
                   </div>
                 </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Photo</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0"><img src="{{ asset('uploadedImage/'.$item->image) }}" alt="image"></p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="container-login100-form-btn">

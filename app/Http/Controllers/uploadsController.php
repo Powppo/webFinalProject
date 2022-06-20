@@ -25,7 +25,7 @@ class uploadsController extends Controller
         if ($request->hasfile('image'))
         {
 
-            $request->file('image')->move('uploadedImage/', $rquest->file('image')->getClientOriginalName());
+            $request->file('image')->move('public/uploadedImage/', $request->file('image')->getClientOriginalName());
             $data->image = $request->file('image')->getClientOriginalName();
             if ($data->save())
             {

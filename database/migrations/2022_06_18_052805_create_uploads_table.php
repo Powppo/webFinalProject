@@ -17,7 +17,7 @@ class CreateUploadsTable extends Migration
             $table->id();
             
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->string('title')->default('');
             $table->integer('price');

@@ -8,14 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Uploads extends Model
 {
     use HasFactory;
+    protected $table = 'uploads';
     protected $fillable = [
         'title',
         'price',
         'description',
         'image',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
 }

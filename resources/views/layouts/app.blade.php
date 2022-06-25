@@ -261,7 +261,7 @@
               <h4>Street 1</h4>
               <p>Street Photography</p>
               <a href="{{ asset('style/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Street 1"><i class="bi bi-plus"></i></a>
-              <a href={{ route('layouts.galleries') }} class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href={{ route('galleries') }} class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 

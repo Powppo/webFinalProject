@@ -167,17 +167,21 @@
                     <p class="mb-0">Photo</p>
                   </div>
                   <div class="col-sm-9">
-                    <p class="text-muted mb-0"><img src="{{ asset('uploadedImage/'.$item->image) }}" alt="image"></p>
+                    <p class="text-muted mb-0"><img src="{{ asset('storage/'.$item->image) }}" alt="image" width="400px"></p>
                   </div>
                 </div>
-              </div>
+                <hr>
             </div>
-            <div class="container-login100-form-btn">
-                <div class="wrap-login100-form-btn">
-                  <div class="login100-form-bgbtn"></div>
-                  <button type="submit" id="upload" class="login100-form-btn">
-                    Checkout
-                  </button>
+            <div class="limiter">
+              <div class="container-login100">
+                  <form class="login100-form validate-form" method="GET" action="checkouts">
+                          @csrf
+          <div class="container-login100-form-btn">
+              <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button href="checkouts" type="submit" id="upload" class="login100-form-btn">
+                  Checkout
+                </button>
                 </div>
               </div>
         @endforeach

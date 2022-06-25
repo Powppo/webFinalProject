@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Uploads;
+use App\Models\Payments;
 
 class uploadsController extends Controller
 {
@@ -15,25 +16,40 @@ class uploadsController extends Controller
     public function index2()
     {
         $uploads=Uploads::all();
-        //return $user;
         return view ('layouts.galleries', compact('uploads'));
     }
 
-    protected function uploads(Request $request)
+    //public function index3()
+    //{
+    //    $uploads=Uploads::all();
+    //    return view ('home', compact('uploads'));
+    //}
+
+    protected function store(Request $request)
     {   
-        $data = uploads::create($request->all());
-        if ($request->hasfile('image'))
-        {
+    
+        $fileName = $request->image->getClientOriginalName();
+        $image = $request->image->storeAs('images', $fileName);
 
-            $request->file('image')->move('public/uploadedImage/', $request->file('image')->getClientOriginalName());
-            $data->image = $request->file('image')->getClientOriginalName();
-            if ($data->save())
+        $data = uploads::create([
+            'title' => $request->title,
+            'price' => $request->price,
+            'description' => $request->description,
+            'image' => $image,
+        ]);
+
+        if ($data->save())
             {
-                return redirect('uploads')->with('status', 'Uploads Success');
+                return redirect('home')->with('status', 'Upload Success');
             } else {
-                return redirect('uploads')->with('status', 'Uploads Failed');
-
-            };
-        }
+                return redirect('home')->with('status', 'Upload Denied');
+            }
     }
+
+    protected function storeCheckouts()
+    {   
+        $payment=Payments::all();
+        return view ('home', compact('payment'));
+    }
+
 }

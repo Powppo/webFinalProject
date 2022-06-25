@@ -77,7 +77,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="{{ route('home') }}"" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
+      <a href="{{ route('home') }}" class="logo mr-auto"><img src="{{ asset('style/assets/img/logo3.png')}}" alt=""></a>
       <!-- Uncomment below if you prefer to use a text logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
@@ -143,57 +143,62 @@
           <div class="limiter">
             <div class="container-login100" style="margin-top: 90px">
               <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{ route('store') }}" enctype="multipart/form-data">
+                <form class="login100-form validate-form" method="POST" action="{{ url('updateProfile', $edit->id) }}">
                         @csrf
                   <span class="login100-form-title p-b-26">
-                    Upload Your Photo Here!
+                    Edit Profile
                   </span>
-                  <!--Title-->
+                  <!--Name-->
                   <div class="wrap-input100 validate-input">
-                    <input class="input100" id="title" type="title" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
-                    @error('title')
+                    <input class="input100" id="name" type="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $edit->name }}" required autocomplete="name" autofocus>
+                    @error('name')
                       <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
                       </span>
                     @enderror
-                      <span class="focus-input100" data-placeholder="Photo Title"></span>
+                      <span class="focus-input100" data-placeholder="Name"></span>
                   </div>
 
-                  <!--Price-->
+                  <!--Location-->
                   <div class="wrap-input100 validate-input">
-                    <input class="input100" id="price" type="price" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
-                    @error('price')
+                    <input class="input100" id="address" type="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ $edit->address }}" required autocomplete="address" autofocus>
+                    @error('address')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                       </span>
                     @enderror
-                      <span class="focus-input100" data-placeholder="Price"></span>
+                      <span class="focus-input100" data-placeholder="Location"></span>
                   </div>
 
-                  <!--Description-->
+                  <!--Contact-->
                   <div class="wrap-input100 validate-input">
-                    <input class="input100" id="description" type="description" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
-                    @error('description')
+                    <input class="input100" id="phoneNumber" type="phoneNumber" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ $edit->phoneNumber }}" required autocomplete="phoneNumber" autofocus>
+                    @error('phoneNumber')
                       <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                       </span>
                     @enderror
-                      <span class="focus-input100" data-placeholder="Photo Description"></span>
+                      <span class="focus-input100" data-placeholder=Contact></span>
                   </div>
                   
-                  <!--Upload Image-->
-                  <div class="col-md-12">
-                    <div class="form-group" >
-                        <input type="file" name="image" id="image" class="form-control">
-                    </div>
+                  <!--Email-->
+                  <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="input100" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $edit->email }}" required autocomplete="email" autofocus>
+                    @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    <span class="focus-input100" data-placeholder="Email"></span>
                 </div>
+
 
                   <!--Button-->
                   <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                       <div class="login100-form-bgbtn"></div>
                       <button type="submit" id="upload" class="login100-form-btn">
-                        Upload
+                        Apply Changes
                       </button>
                     </div>
                   </div>

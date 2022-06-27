@@ -183,12 +183,12 @@
         <body>
           <div class="limiter">
             <div class="container-login100">
-                <form class="login100-form validate-form" method="GET" action="editTest">
+                <form class="login100-form validate-form" method="GET" action= {{ route('editProfile', $item->id) }}>
                         @csrf
         <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
-              <button href="editTest" type="submit" id="upload" class="login100-form-btn">
+              <button href={{ route('editProfile', $item->id) }} type="submit" id="upload" class="login100-form-btn">
                 Edit Profile
               </button>
             </div>

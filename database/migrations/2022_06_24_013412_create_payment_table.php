@@ -16,6 +16,7 @@ class CreatePaymentTable extends Migration
         Schema::create('payment', function (Blueprint $table) {
             $table->id();
             $table->string('payment_method');
+            $table->string('payment_term');
 
             $table->unsignedBigInteger('uploads_id')->nullable();
             $table->foreign('uploads_id')->references('id')->on('uploads');

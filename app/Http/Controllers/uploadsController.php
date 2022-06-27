@@ -46,10 +46,19 @@ class uploadsController extends Controller
             }
     }
 
-    protected function storeCheckouts()
+    protected function storeCheckouts(Request $request)
     {   
-        $payment=Payments::all();
-        return view ('home', compact('payment'));
+        $data = uploads::create([
+            'payment_method' => $request->payment_method,
+            'payment_term' => $request->payment_term,
+        ]);
+
+        if ($data->save())
+            {
+                return redirect('home')->with('status', 'Upload Success');
+            } else {
+                return redirect('home')->with('status', 'Upload Denied');
+            }
     }
 
 }

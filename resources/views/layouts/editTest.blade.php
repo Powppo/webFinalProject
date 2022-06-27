@@ -148,6 +148,7 @@
                   <span class="login100-form-title p-b-26">
                     Edit Profile
                   </span>
+                  
                   <!--Name-->
                   <div class="wrap-input100 validate-input">
                     <input class="input100" id="name" type="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $edit->name }}" required autocomplete="name" autofocus>

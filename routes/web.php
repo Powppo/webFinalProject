@@ -39,7 +39,8 @@ Route::get('myprofile', [showProfileController::class, 'show'])->name('layouts.s
 Route::get('galleries', [uploadsController::class, 'index2'])->name('galleries');
 
 //Checkout
-Route::post('checkouts', [uploadsController::class, 'storeCheckouts'])->name('checkouts');
+Route::get('checkouts', [uploadsController::class, 'index3'])->name('checkouts');
+Route::post('checkouts_', [App\Http\Controllers\uploadsController::class, 'storeCheckouts'])->name('checkouts_');
 
 //Upload
 Route::get('uploadsPage', [uploadsController::class, 'index'])->name('uploadsPage');
@@ -47,7 +48,6 @@ Route::post('uploads', [App\Http\Controllers\uploadsController::class, 'store'])
 
 //Edit
 Route::get('editProfile/{id}', [userController::class, 'edit'])->name('editProfile');
-//Route::get('editTest', [userController::class, 'editTest'])->name('editTest');
 
 //Update
 Route::post('updateProfile/{id}', [userController::class, 'update'])->name('updateProfile');

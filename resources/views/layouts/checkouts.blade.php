@@ -126,21 +126,28 @@
       <main id="main">
 
         <!--My Checkout Form-->
+        <section id="upload">
+          <div class="container" data-aos="fade-up">
+            <div class="row">
+              <div class="col-md-12">
+              </div>
+            </div>
         <body>
             <div class="limiter">
                 <div class="container-login100" style="margin-top: 90px">
                   <div class="wrap-login100">
-                    <form class="login100-form validate-form" method="POST" action="{{ route('checkouts') }}" enctype="multipart/form-data">
+                    <form class="login100-form validate-form" method="POST" action="{{ route('checkouts_') }}" enctype="multipart/form-data">
                             @csrf
                       <span class="login100-form-title p-b-26">
                         Checkout your Photo!
                       </span>
                       <h4 style="text-align: center">Please select Payment Method and Terms!</h4>
                       <!--Payment Method-->
+                      <h6 style="text-align: center">Payment Method</h6>
                       <div class="col-sm-12">
                         <div class="form-group">
-                          <select name="payment_method" id="payment_method" class="form-control">
-                            <option selected>Payment Method..</option>
+                          <select name="payment_method" id="payment_method" type="payment_method" class="form-control @error('payment_method') is-invalid @enderror" name="payment_method" required autocomplete="payment_method" autofocus>                     
+                            <option selected></option>
                             <option>PayPal</option>
                             <option>Mobile Banking</option>
                             <option>Amazon Pay</option>
@@ -148,26 +155,26 @@
                         </div>
                     </div>
                     <!--Payment Term-->
-            <div class="col-sm-12">
-                <div class="form-group">
-                  <select name="payment_term" id="payment_term" class="form-control">
-                    <option selected>Payment Term..</option>
-                    <option>Annually License</option>
-                    <option>Monthly License</option>
-                    <option>Lifetime License</option>
-                  </select>
-                </div>
-            </div>
-        </div>
+                    <h6 style="text-align: center">Payment Term</h6>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                          <select name="payment_term" id="payment_term" type="payment_term" class="form-control @error('payment_term') is-invalid @enderror" name="payment_term" required autocomplete="payment_term" autofocus>
+                            <option selected></option>
+                            <option>Annually License</option>
+                            <option>Monthly License</option>
+                            <option>Lifetime License</option>
+                          </select>
+                        </div>
+                      </div>
         <!--Button-->
-        <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
+            <div class="wrap-login100-form-btn" style="margin-top: 30px">
               <div class="login100-form-bgbtn"></div>
               <button type="submit" id="upload" class="login100-form-btn">
                 Apply Checkout
               </button>
             </div>
           </div>
+        </div>
         </body>
                 
         </section>
@@ -177,7 +184,7 @@
       <!-- End #main -->
     
       <!-- ======= Footer ======= -->
-      <footer id="footer" style="position: relative; margin-top: 500px">
+      <footer id="footer" style="position: relative; margin-top: 300px">
         <div class="container">
           <div class="row">
             <div class="col-md-12">

@@ -9,7 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!--source-->
+<!--source-->
 <!--===============================================================================================-->	
 <link rel="icon" type="image/png" href="loginStyle3/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -127,10 +127,11 @@
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
+    <!--Test-->
 
-  <main id="main">
-
+    <!--Test-->
     <!-- ======= Upload Section ======= -->
     <section id="upload">
       <div class="container" data-aos="fade-up">
@@ -141,66 +142,42 @@
     
         <body>
           <div class="limiter">
-            <div class="container-login100" style="margin-top: 90px">
-              <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{ url('updateProfile', $edit->id) }}">
+            <div style="margin-top: 90px">
+                <form class="form-control" method="POST" action="{{ url('updateProfile', $edit->id) }}">
                         @csrf
-                  <span class="login100-form-title p-b-26">
-                    Edit Profile
-                  </span>
+                  <h4>
+                    <div style="text-align: center">
+                      Edit Profile!
+                    </div>
+                  </h4>
                   <!--Name-->
-                  <div class="wrap-input100 validate-input">
-                    <input class="input100" id="name" type="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $edit->name }}" required autocomplete="name" autofocus>
-                    @error('name')
-                      <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                      </span>
-                    @enderror
-                      <span class="focus-input100" data-placeholder="Name"></span>
+                  <h6 style="margin-bottom: 5px">Name Edit</h6>
+                  <div class="wrap-input100 validate-input" style="margin-bottom: 15px">
+                    <input class="form-control" id="name" type="name" class="form-control" name="name" value="{{ $edit->name }}" autofocus>
                   </div>
 
                   <!--Location-->
-                  <div class="wrap-input100 validate-input">
-                    <input class="input100" id="address" type="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ $edit->address }}" required autocomplete="address" autofocus>
-                    @error('address')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                    @enderror
-                      <span class="focus-input100" data-placeholder="Location"></span>
+                  <h6 style="margin-bottom: 5px">Location Edit</h6>
+                  <div class="wrap-input100 validate-input" style="margin-bottom: 15px">
+                    <input class="form-control" id="address" type="address" class="form-control" name="address" value="{{ $edit->address }}" autofocus>
                   </div>
 
                   <!--Contact-->
-                  <div class="wrap-input100 validate-input">
-                    <input class="input100" id="phoneNumber" type="phoneNumber" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ $edit->phoneNumber }}" required autocomplete="phoneNumber" autofocus>
-                    @error('phoneNumber')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                    @enderror
-                      <span class="focus-input100" data-placeholder=Contact></span>
+                  <h6 style="margin-bottom: 5px">Contact Edit</h6>
+                  <div class="wrap-input100 validate-input" style="margin-bottom: 15px">
+                    <input class="form-control" id="phoneNumber" type="phoneNumber" class="form-control" name="phoneNumber" value="{{ $edit->phoneNumber }}" autofocus>
                   </div>
                   
                   <!--Email-->
-                  <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                    <input class="input100" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $edit->email }}" required autocomplete="email" autofocus>
-                    @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    <span class="focus-input100" data-placeholder="Email"></span>
-                </div>
+                  <h6 style="margin-bottom: 5px">Email Edit</h6>
+                  <div class="wrap-input100 validate-input" style="margin-bottom: 15px">
+                    <input class="form-control" id="email" type="email" class="form-control" name="email" value="{{ $edit->email }}" autofocus>
+                  </div>
 
 
                   <!--Button-->
-                  <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                      <div class="login100-form-bgbtn"></div>
-                      <button type="submit" id="upload" class="login100-form-btn">
-                        Apply Changes
-                      </button>
-                    </div>
+                  <div style="margin-bottom: 7px">
+                    <button type="submit" id="upload"  class="btn btn-dark" style="margin-left: 1134px">Apply Changes</button>
                   </div>
                   
                   @if (session('status'))
@@ -214,7 +191,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" style="position: relative; margin-top: 200px">
+  <footer id="footer" style="position: relative; margin-top: 370px">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

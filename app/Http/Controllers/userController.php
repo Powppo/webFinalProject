@@ -15,12 +15,6 @@ class userController extends Controller
             return view('layouts.edit', compact('edit'));
         }
 
-        public function editTest ()
-        {
-            $edit = User::all();
-            return view('layouts.editTest', compact('edit'));
-        }
-
         public function update (Request $request, $id)
         {
             $edit = User::findorfail($id);
@@ -32,4 +26,5 @@ class userController extends Controller
                 return redirect('myprofile')->with('status', 'Update Denied');
             }
         }
+
 }

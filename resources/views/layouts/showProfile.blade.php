@@ -180,8 +180,6 @@
             </div>
           </div>
         </div>
-        <body>
-          <div class="limiter">
             <div class="container-login100">
                 <form class="login100-form validate-form" method="GET" action= {{ route('editProfile', $item->id) }}>
                         @csrf

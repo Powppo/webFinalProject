@@ -170,7 +170,6 @@
                     <p class="text-muted mb-0"><img src="{{ asset('storage/'.$item->image) }}" alt="image" width="400px"></p>
                   </div>
                 </div>
-                <hr>
             </div>
             <div class="limiter">
               <div class="container-login100">
@@ -192,7 +191,7 @@
       <!-- End #main -->
     
       <!-- ======= Footer ======= -->
-      <footer id="footer" style="position: relative; margin-top: 500px">
+      <footer id="footer" style="position: relative; margin-top: 250px">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
